@@ -15,4 +15,4 @@ Ein Push auf `main` startet `.github/workflows/pages.yml` und veröffentlicht di
 
 ## Inhaltliche Leitlinie
 
-Die Positionierung folgt dem vorhandenen Businessplan: kleine Firmen und Teams bis etwa zehn Mitarbeitende, Freiberufler und Privatpersonen; Netzwerk und WLAN, Geräte und Arbeitsplätze, Server und Cloud sowie E-Commerce und Web. Das Angebot ist Hilfe auf Zuruf nach aktueller Verfügbarkeit, ohne starre SLAs oder unnötige monatliche Pauschalen.
+Die Positionierung folgt dem vorhandenen Businessplan: kleine Firmen und Teams bis etwa zehn Mitarbeitende, Freiberufler und Privatpersonen; Netzwerk und WLAN, Geräte und Arbeitsplätze, Server und Cloud sowie E-Commerce und Web. Das Angebot ist konkrete Hilfe auf Zuruf nach Absprache und aktueller Verfügbarkeit – ohne starre SLAs, 24/7-Versprechen oder unnötige monatliche Bereitschaftspauschalen. Monitoring und laufende Betreuung sind bewusst kein Bestandteil des Startangebots.
