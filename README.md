@@ -10,7 +10,7 @@ Ein Push auf `main` startet `.github/workflows/pages.yml` und veröffentlicht di
 
 - [x] Impressum mit echtem Namen, ladungsfähiger Anschrift und Kontaktdaten ausgefüllt (Tim-Lion Niedermaier / wutz consulting, Werinherstr. 110, 81541 München). Auf eine Telefonnummer wurde bewusst verzichtet – die private Mobilnummer bleibt unveröffentlicht, eine E-Mail-Adresse reicht für die „schnelle elektronische Kontaktaufnahme“ nach § 5 TMG aus. Bei Bedarf ergänzen.
 - Datenschutzerklärung auf die tatsächlich verwendete Mail- und Hosting-Infrastruktur abstimmen.
-- Prüfen, ob `kontakt@itmitalles.de` als Postfach eingerichtet ist.
+- Prüfen, ob `tim@itmitalles.de` als Postfach eingerichtet ist.
 - DNS für `itmitalles.de` und optional `www.itmitalles.de` auf GitHub Pages zeigen lassen.
 
 ## Inhaltliche Leitlinie
