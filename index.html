@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://itmitalles.de/">
     <title>IT mit alles – IT-Service aus Giesing</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="ld-json">
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
@@ -24,11 +24,11 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+    <a class="skip-link" href="#inhalt"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span></a>
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="/" aria-label="IT mit alles Startseite">
+        <a class="brand" href="/" data-label-de="IT mit alles Startseite" data-label-en="IT mit alles homepage" aria-label="IT mit alles Startseite">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 44 44" role="img">
               <path d="M7 8h30v28H7z" fill="none" stroke="currentColor" stroke-width="3"/>
@@ -38,13 +38,19 @@
           </span>
           <span>it mit <b>alles</b></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menü</button>
-        <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#ueber-mich">Über mich</a>
-          <a href="#arbeitsweise">Arbeitsweise</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
+        <div class="nav-actions">
+          <nav id="main-nav" class="main-nav" data-label-de="Hauptnavigation" data-label-en="Main navigation" aria-label="Hauptnavigation">
+            <a href="#leistungen"><span lang="de">Leistungen</span><span lang="en">Services</span></a>
+            <a href="#ueber-mich"><span lang="de">Über mich</span><span lang="en">About me</span></a>
+            <a href="#arbeitsweise"><span lang="de">Arbeitsweise</span><span lang="en">How I work</span></a>
+            <a href="#kontakt"><span lang="de">Kontakt</span><span lang="en">Contact</span></a>
+          </nav>
+          <div class="lang-switch" role="group" aria-label="Sprache / Language">
+            <button type="button" data-lang-switch="de" aria-pressed="true">DE</button>
+            <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span lang="de">Menü</span><span lang="en">Menu</span></button>
+        </div>
       </div>
     </header>
 
@@ -52,44 +58,44 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-dot"></span> IT-Service aus Giesing</p>
-            <h1>IT, die einfach <em>funktioniert.</em></h1>
-            <p class="hero-lead">Verständliche Hilfe für kleine Firmen, Selbstständige und Privatpersonen in München. Von WLAN bis Warenwirtschaft – persönlich, pragmatisch und ohne unnötiges Theater.</p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> <span lang="de">IT-Service aus Giesing</span><span lang="en">IT service from Giesing</span></p>
+            <h1><span lang="de">IT, die einfach <em>funktioniert.</em></span><span lang="en">IT that simply <em>works.</em></span></h1>
+            <p class="hero-lead"><span lang="de">Verständliche Hilfe für kleine Firmen, Selbstständige und Privatpersonen in München. Von WLAN bis Warenwirtschaft – persönlich, pragmatisch und ohne unnötiges Theater.</span><span lang="en">Straightforward help for small businesses, freelancers and individuals in Munich. From WiFi to inventory systems – personal, pragmatic, and without unnecessary drama.</span></p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#kontakt">Problem schildern <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#leistungen">Was ich mache <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary" href="#kontakt"><span lang="de">Problem schildern</span><span lang="en">Describe your problem</span> <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#leistungen"><span lang="de">Was ich mache</span><span lang="en">What I do</span> <span aria-hidden="true">↓</span></a>
             </div>
-            <div class="hero-notes" aria-label="Arbeitsgebiet">
-              <span><i>●</i> Giesing &amp; München</span>
-              <span><i>●</i> Vor Ort &amp; remote</span>
-              <span><i>●</i> Auf Zuruf statt im Abo</span>
+            <div class="hero-notes" data-label-de="Arbeitsgebiet" data-label-en="Service area" aria-label="Arbeitsgebiet">
+              <span><i>●</i> <span lang="de">Giesing &amp; München</span><span lang="en">Giesing &amp; Munich</span></span>
+              <span><i>●</i> <span lang="de">Vor Ort &amp; remote</span><span lang="en">On-site &amp; remote</span></span>
+              <span><i>●</i> <span lang="de">Auf Zuruf statt im Abo</span><span lang="en">On-demand, not subscription</span></span>
             </div>
           </div>
-          <div class="hero-visual" aria-label="Illustration eines aufgeräumten IT-Arbeitsplatzes">
+          <div class="hero-visual" data-label-de="Illustration eines aufgeräumten IT-Arbeitsplatzes" data-label-en="Illustration of a tidy IT workspace" aria-label="Illustration eines aufgeräumten IT-Arbeitsplatzes">
             <div class="orbit orbit-one"></div>
             <div class="orbit orbit-two"></div>
             <div class="visual-card visual-card-main">
-              <div class="window-bar"><span></span><span></span><span></span><b>system läuft</b></div>
+              <div class="window-bar"><span></span><span></span><span></span><b><span lang="de">system läuft</span><span lang="en">system running</span></b></div>
               <div class="visual-screen">
                 <div class="screen-line screen-line-long"></div>
                 <div class="screen-line screen-line-short"></div>
                 <div class="screen-grid"><span></span><span></span><span></span><span></span></div>
-                <div class="screen-status"><i></i><span>alles im grünen Bereich</span></div>
+                <div class="screen-status"><i></i><span><span lang="de">alles im grünen Bereich</span><span lang="en">all systems green</span></span></div>
               </div>
             </div>
-            <div class="visual-card visual-card-small card-wifi"><span class="card-icon">⌁</span><b>WLAN</b><small>verbunden</small></div>
-            <div class="visual-card visual-card-small card-backup"><span class="card-icon">↻</span><b>Backup</b><small>gesichert</small></div>
-            <div class="visual-label">kein Kabelsalat</div>
+            <div class="visual-card visual-card-small card-wifi"><span class="card-icon">⌁</span><b>WLAN</b><small><span lang="de">verbunden</span><span lang="en">connected</span></small></div>
+            <div class="visual-card visual-card-small card-backup"><span class="card-icon">↻</span><b>Backup</b><small><span lang="de">gesichert</span><span lang="en">secured</span></small></div>
+            <div class="visual-label"><span lang="de">kein Kabelsalat</span><span lang="en">no cable chaos</span></div>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Kurzprofil">
+      <section class="trust-strip" data-label-de="Kurzprofil" data-label-en="Quick profile" aria-label="Kurzprofil">
         <div class="container trust-grid">
-          <p class="trust-intro">Ein Ansprechpartner für die Technik im Hintergrund.</p>
-          <div><strong>Kleine Firmen</strong><span>bis ca. 10 Mitarbeitende</span></div>
-          <div><strong>Privatpersonen</strong><span>für Zuhause und Homeoffice</span></div>
-          <div><strong>Gute Lösungen</strong><span>passend statt überdimensioniert</span></div>
+          <p class="trust-intro"><span lang="de">Ein Ansprechpartner für die Technik im Hintergrund.</span><span lang="en">One point of contact for the tech behind the scenes.</span></p>
+          <div><strong><span lang="de">Kleine Firmen</span><span lang="en">Small businesses</span></strong><span><span lang="de">bis ca. 10 Mitarbeitende</span><span lang="en">up to approx. 10 employees</span></span></div>
+          <div><strong><span lang="de">Privatpersonen</span><span lang="en">Individuals</span></strong><span><span lang="de">für Zuhause und Homeoffice</span><span lang="en">for home and home office</span></span></div>
+          <div><strong><span lang="de">Gute Lösungen</span><span lang="en">Good solutions</span></strong><span><span lang="de">passend statt überdimensioniert</span><span lang="en">fitting, not oversized</span></span></div>
         </div>
       </section>
 
@@ -97,46 +103,46 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Was ich für dich löse</p>
-              <h2>Alles, was im Alltag<br><em>nicht nerven soll.</em></h2>
+              <p class="eyebrow"><span lang="de">Was ich für dich löse</span><span lang="en">What I solve for you</span></p>
+              <h2><span lang="de">Alles, was im Alltag<br><em>nicht nerven soll.</em></span><span lang="en">Everything that shouldn't<br><em>annoy you daily.</em></span></h2>
             </div>
-            <p>Du musst keine IT-Fachbegriffe kennen. Beschreib einfach, was nicht funktioniert – ich sortiere den Rest.</p>
+            <p><span lang="de">Du musst keine IT-Fachbegriffe kennen. Beschreib einfach, was nicht funktioniert – ich sortiere den Rest.</span><span lang="en">You don't need to know IT jargon. Just describe what's not working – I'll sort out the rest.</span></p>
           </div>
           <div class="service-grid">
             <article class="service-card service-card-featured">
               <span class="service-number">01</span>
               <div class="service-icon" aria-hidden="true">⌁</div>
-              <h3>Netzwerk &amp; WLAN</h3>
-              <p>Stabiles WLAN, sauber eingerichtete Router, sichere Firewalls und VPN-Verbindungen, die nicht bei jedem Regen aussteigen.</p>
-              <span class="service-tags">WLAN · Router · VPN · Sicherheit</span>
+              <h3><span lang="de">Netzwerk &amp; WLAN</span><span lang="en">Network &amp; WiFi</span></h3>
+              <p><span lang="de">Stabiles WLAN, sauber eingerichtete Router, sichere Firewalls und VPN-Verbindungen, die nicht bei jedem Regen aussteigen.</span><span lang="en">Stable WiFi, properly configured routers, secure firewalls and VPN connections that don't drop every time it rains.</span></p>
+              <span class="service-tags"><span lang="de">WLAN · Router · VPN · Sicherheit</span><span lang="en">WiFi · Router · VPN · Security</span></span>
             </article>
             <article class="service-card">
               <span class="service-number">02</span>
               <div class="service-icon" aria-hidden="true">▣</div>
-              <h3>Geräte &amp; Arbeitsplätze</h3>
-              <p>Computer, Drucker, Monitore und Office-Umgebungen. Einrichtung, Aufräumen, Umzug oder Reparatur – vor Ort oder remote.</p>
+              <h3><span lang="de">Geräte &amp; Arbeitsplätze</span><span lang="en">Devices &amp; Workspaces</span></h3>
+              <p><span lang="de">Computer, Drucker, Monitore und Office-Umgebungen. Einrichtung, Aufräumen, Umzug oder Reparatur – vor Ort oder remote.</span><span lang="en">Computers, printers, monitors and office environments. Setup, cleanup, relocation or repair – on-site or remote.</span></p>
               <span class="service-tags">Windows · macOS · Linux · Office</span>
             </article>
             <article class="service-card">
               <span class="service-number">03</span>
               <div class="service-icon" aria-hidden="true">◒</div>
               <h3>Server &amp; Cloud</h3>
-              <p>Docker, Virtualisierung, Self-Hosted-Dienste und Backups. Verständlich geplant und so gebaut, dass du später noch durchblickst.</p>
+              <p><span lang="de">Docker, Virtualisierung, Self-Hosted-Dienste und Backups. Verständlich geplant und so gebaut, dass du später noch durchblickst.</span><span lang="en">Docker, virtualization, self-hosted services and backups. Planned clearly and built so you can still make sense of it later.</span></p>
               <span class="service-tags">Server · Docker · Backup · Cloud</span>
             </article>
             <article class="service-card">
               <span class="service-number">04</span>
               <div class="service-icon" aria-hidden="true">↗</div>
               <h3>E-Commerce &amp; Web</h3>
-              <p>Technische Hilfe bei Webshops, Warenwirtschaft und Websites – von der ersten Idee bis zum laufenden Betrieb.</p>
-              <span class="service-tags">Webshops · WaWi · Websites</span>
+              <p><span lang="de">Technische Hilfe bei Webshops, Warenwirtschaft und Websites – von der ersten Idee bis zum laufenden Betrieb.</span><span lang="en">Technical help with online shops, inventory systems and websites – from the first idea to ongoing operation.</span></p>
+              <span class="service-tags"><span lang="de">Webshops · WaWi · Websites</span><span lang="en">Online shops · Inventory systems · Websites</span></span>
             </article>
             <article class="service-card service-card-wide">
               <span class="service-number">05</span>
               <div class="service-icon" aria-hidden="true">⚙</div>
-              <h3>Automatisierung &amp; individuelle Tools</h3>
-              <p>Wiederkehrende Handarbeit, die eigentlich ein Skript erledigen sollte – zum Beispiel automatisches Auslesen von PDF-Rechnungen. Kein Standard-Software-Projekt, sondern maßgeschneidert auf dein konkretes Problem.</p>
-              <span class="service-tags">Automatisierung · Skripte · Rechnungsauslese · Individuelle Tools</span>
+              <h3><span lang="de">Automatisierung &amp; individuelle Tools</span><span lang="en">Automation &amp; Custom Tools</span></h3>
+              <p><span lang="de">Wiederkehrende Handarbeit, die eigentlich ein Skript erledigen sollte – zum Beispiel automatisches Auslesen von PDF-Rechnungen. Kein Standard-Software-Projekt, sondern maßgeschneidert auf dein konkretes Problem.</span><span lang="en">Repetitive manual work that a script should really be doing – like automatically reading data out of PDF invoices. Not an off-the-shelf software project, but tailored to your specific problem.</span></p>
+              <span class="service-tags"><span lang="de">Automatisierung · Skripte · Rechnungsauslese · Individuelle Tools</span><span lang="en">Automation · Scripts · Invoice extraction · Custom tools</span></span>
             </article>
           </div>
         </div>
@@ -145,15 +151,15 @@
       <section id="ueber-mich" class="section about-section">
         <div class="container about-grid">
           <div class="about-copy">
-            <p class="eyebrow">Wer hier ans Telefon geht</p>
-            <h2>Kein Callcenter.<br><em>Nur ich.</em></h2>
-            <p>Mein Name ist Tim. Hauptberuflich arbeite ich als Systemadministrator und DevOps Engineer in München – Linux-Server, Netzwerke, Automatisierung, Cloud. IT mit alles ist genau diese Erfahrung, nur für kleine Firmen und Privatpersonen statt für Rechenzentren.</p>
-            <p>Seit 2016 betreue ich nebenbei als wutz consulting kleine Unternehmen, von der kompletten IT-Infrastruktur bis zur Warenwirtschaft. Was ich im Tagesgeschäft lerne, kommt auch bei dir an.</p>
+            <p class="eyebrow"><span lang="de">Wer hier ans Telefon geht</span><span lang="en">Who picks up the phone</span></p>
+            <h2><span lang="de">Kein Callcenter.<br><em>Nur ich.</em></span><span lang="en">No call center.<br><em>Just me.</em></span></h2>
+            <p><span lang="de">Mein Name ist Tim. Hauptberuflich arbeite ich als Systemadministrator und DevOps Engineer in München – Linux-Server, Netzwerke, Automatisierung, Cloud. IT mit alles ist genau diese Erfahrung, nur für kleine Firmen und Privatpersonen statt für Rechenzentren.</span><span lang="en">My name is Tim. My day job is systems administrator and DevOps engineer in Munich – Linux servers, networks, automation, cloud. IT mit alles is exactly that experience, just for small businesses and individuals instead of data centers.</span></p>
+            <p><span lang="de">Seit 2016 betreue ich nebenbei als wutz consulting kleine Unternehmen, von der kompletten IT-Infrastruktur bis zur Warenwirtschaft. Was ich im Tagesgeschäft lerne, kommt auch bei dir an.</span><span lang="en">Since 2016 I've been supporting small businesses on the side as wutz consulting, from complete IT infrastructure to inventory management. What I learn in my day job benefits you too.</span></p>
           </div>
-          <div class="about-creds" aria-label="Ausbildung und Zertifikate">
-            <p class="creds-intro">Ausbildung &amp; Zertifikate</p>
+          <div class="about-creds" data-label-de="Ausbildung und Zertifikate" data-label-en="Education and certifications" aria-label="Ausbildung und Zertifikate">
+            <p class="creds-intro"><span lang="de">Ausbildung &amp; Zertifikate</span><span lang="en">Education &amp; Certifications</span></p>
             <ul class="creds-list">
-              <li>Fachinformatiker Systemintegration</li>
+              <li><span lang="de">Fachinformatiker Systemintegration</span><span lang="en">IT Specialist – System Integration (Fachinformatiker Systemintegration)</span></li>
               <li>LPIC-1 – Linux Administrator</li>
               <li>CompTIA Linux+</li>
               <li>ITIL</li>
@@ -166,16 +172,16 @@
       <section id="arbeitsweise" class="section approach-section">
         <div class="container approach-grid">
           <div class="approach-copy">
-            <p class="eyebrow eyebrow-light">Die Idee dahinter</p>
-            <h2>Technik darf<br><em>unaufgeregt</em> sein.</h2>
-            <p>Keine riesigen IT-Projekte, keine unnötigen Wartungsverträge und kein Verkauf von Dingen, die du nicht brauchst. Ich schaue mir an, was da ist, räume auf und löse das konkrete Problem.</p>
-            <p>Bewusst ohne starre SLAs, 24/7-Versprechen oder monatliche Bereitschaftspauschale: Du zahlst für konkrete Arbeit, wenn sie gebraucht wird. Die Bearbeitung erfolgt nach Absprache und aktueller Verfügbarkeit.</p>
-            <p>Du bekommst eine klare Einschätzung, eine nachvollziehbare Lösung und einen Ansprechpartner, der auch nach dem Satz „Das Internet geht nicht“ noch ruhig bleibt.</p>
+            <p class="eyebrow eyebrow-light"><span lang="de">Die Idee dahinter</span><span lang="en">The idea behind it</span></p>
+            <h2><span lang="de">Technik darf<br><em>unaufgeregt</em> sein.</span><span lang="en">Tech is allowed<br>to stay <em>calm.</em></span></h2>
+            <p><span lang="de">Keine riesigen IT-Projekte, keine unnötigen Wartungsverträge und kein Verkauf von Dingen, die du nicht brauchst. Ich schaue mir an, was da ist, räume auf und löse das konkrete Problem.</span><span lang="en">No massive IT projects, no unnecessary maintenance contracts, and no selling you things you don't need. I look at what's there, tidy it up, and solve the actual problem.</span></p>
+            <p><span lang="de">Bewusst ohne starre SLAs, 24/7-Versprechen oder monatliche Bereitschaftspauschale: Du zahlst für konkrete Arbeit, wenn sie gebraucht wird. Die Bearbeitung erfolgt nach Absprache und aktueller Verfügbarkeit.</span><span lang="en">Deliberately without rigid SLAs, 24/7 promises, or a monthly standby fee: you pay for actual work, when it's needed. Work is scheduled by arrangement and current availability.</span></p>
+            <p><span lang="de">Du bekommst eine klare Einschätzung, eine nachvollziehbare Lösung und einen Ansprechpartner, der auch nach dem Satz „Das Internet geht nicht“ noch ruhig bleibt.</span><span lang="en">You get a clear assessment, a solution you can actually follow, and a contact person who stays calm even after hearing "the internet isn't working."</span></p>
           </div>
-          <div class="steps" aria-label="Ablauf">
-            <div class="step"><span>01</span><div><h3>Du meldest dich</h3><p>Kurze Nachricht genügt. Was ist los, wo drückt der Schuh?</p></div></div>
-            <div class="step"><span>02</span><div><h3>Wir schauen gemeinsam</h3><p>Vor Ort in München oder per Fernzugriff – je nachdem, was sinnvoll ist.</p></div></div>
-            <div class="step"><span>03</span><div><h3>Es wird ordentlich</h3><p>Du bekommst eine Lösung, die funktioniert und die du verstehen kannst.</p></div></div>
+          <div class="steps" data-label-de="Ablauf" data-label-en="Process" aria-label="Ablauf">
+            <div class="step"><span>01</span><div><h3><span lang="de">Du meldest dich</span><span lang="en">You reach out</span></h3><p><span lang="de">Kurze Nachricht genügt. Was ist los, wo drückt der Schuh?</span><span lang="en">A short message is enough. What's going on, where's the problem?</span></p></div></div>
+            <div class="step"><span>02</span><div><h3><span lang="de">Wir schauen gemeinsam</span><span lang="en">We take a look together</span></h3><p><span lang="de">Vor Ort in München oder per Fernzugriff – je nachdem, was sinnvoll ist.</span><span lang="en">On-site in Munich or remotely – whichever makes more sense.</span></p></div></div>
+            <div class="step"><span>03</span><div><h3><span lang="de">Es wird ordentlich</span><span lang="en">It gets sorted out</span></h3><p><span lang="de">Du bekommst eine Lösung, die funktioniert und die du verstehen kannst.</span><span lang="en">You get a solution that works and that you can actually understand.</span></p></div></div>
           </div>
         </div>
       </section>
@@ -183,14 +189,14 @@
       <section class="section fit-section">
         <div class="container fit-grid">
           <div>
-            <p class="eyebrow">Passt gut, wenn du …</p>
-            <h2>keine Lust auf<br><em>IT-Zirkus</em> hast.</h2>
+            <p class="eyebrow"><span lang="de">Passt gut, wenn du …</span><span lang="en">A good fit if you …</span></p>
+            <h2><span lang="de">keine Lust auf<br><em>IT-Zirkus</em> hast.</span><span lang="en">are done with<br><em>IT circus acts.</em></span></h2>
           </div>
           <div class="fit-list">
-            <p><span>+</span> eine kleine Firma oder ein Ein-Personen-Business führst</p>
-            <p><span>+</span> jemanden brauchst, der Technik in normale Sprache übersetzt</p>
-            <p><span>+</span> deine Systeme lieber vernünftig einrichtest, bevor es brennt</p>
-            <p><span>+</span> keine monatliche Pauschale für „vielleicht irgendwann“ möchtest</p>
+            <p><span>+</span> <span lang="de">eine kleine Firma oder ein Ein-Personen-Business führst</span><span lang="en">run a small business or a one-person operation</span></p>
+            <p><span>+</span> <span lang="de">jemanden brauchst, der Technik in normale Sprache übersetzt</span><span lang="en">need someone who translates tech into plain language</span></p>
+            <p><span>+</span> <span lang="de">deine Systeme lieber vernünftig einrichtest, bevor es brennt</span><span lang="en">would rather set your systems up properly before something breaks</span></p>
+            <p><span>+</span> <span lang="de">keine monatliche Pauschale für „vielleicht irgendwann“ möchtest</span><span lang="en">don't want to pay a monthly flat fee for "maybe someday"</span></p>
           </div>
         </div>
       </section>
@@ -198,13 +204,13 @@
       <section id="kontakt" class="contact-section">
         <div class="container contact-box">
           <div>
-            <p class="eyebrow eyebrow-light">Erzähl kurz</p>
-            <h2>Was soll<br><em>funktionieren?</em></h2>
+            <p class="eyebrow eyebrow-light"><span lang="de">Erzähl kurz</span><span lang="en">Tell me briefly</span></p>
+            <h2><span lang="de">Was soll<br><em>funktionieren?</em></span><span lang="en">What needs<br>to <em>work?</em></span></h2>
           </div>
           <div class="contact-copy">
-            <p>Schreib ein paar Sätze oder schick ein Foto vom Problem. Ich melde mich mit einer ehrlichen Einschätzung – ohne Verkaufsshow.</p>
-            <a class="button button-light" href="mailto:tim@itmitalles.de?subject=IT-Anfrage%20aus%20Giesing">tim@itmitalles.de <span aria-hidden="true">↗</span></a>
-            <p class="contact-note">Vor Ort in Giesing und München · Remote nach Absprache</p>
+            <p><span lang="de">Schreib ein paar Sätze oder schick ein Foto vom Problem. Ich melde mich mit einer ehrlichen Einschätzung – ohne Verkaufsshow.</span><span lang="en">Write a few sentences or send a photo of the problem. I'll get back to you with an honest assessment – no sales pitch.</span></p>
+            <a class="button button-light" id="contact-email" href="mailto:tim@itmitalles.de?subject=IT-Anfrage%20aus%20Giesing" data-subject-de="IT-Anfrage aus Giesing" data-subject-en="IT inquiry from Giesing">tim@itmitalles.de <span aria-hidden="true">↗</span></a>
+            <p class="contact-note"><span lang="de">Vor Ort in Giesing und München · Remote nach Absprache</span><span lang="en">On-site in Giesing and Munich · Remote by arrangement</span></p>
           </div>
         </div>
       </section>
@@ -213,7 +219,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44"><path d="M7 8h30v28H7z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M13 15h8M13 22h18M13 29h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="33" cy="15" r="3" fill="currentColor"/></svg></span><span>it mit <b>alles</b></span></div>
-        <p>IT-Service aus Giesing.<br>Für kleine Firmen und Privatpersonen.</p>
+        <p><span lang="de">IT-Service aus Giesing.<br>Für kleine Firmen und Privatpersonen.</span><span lang="en">IT service from Giesing.<br>For small businesses and individuals.</span></p>
         <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
         <p class="footer-copy">© <span id="year">2026</span> IT mit alles</p>
       </div>
