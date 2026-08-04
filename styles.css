@@ -93,12 +93,15 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .trust-grid p { margin: 0; }.trust-intro { max-width: 220px; font-size: 1.05rem; font-weight: 800; line-height: 1.15; letter-spacing: -.04em; }
 .trust-grid div { padding-left: 20px; border-left: 1px solid rgba(20,35,41,.28); }.trust-grid strong, .trust-grid span { display: block; }.trust-grid strong { font-size: .8rem; }.trust-grid span { margin-top: 3px; font-family: 'DM Mono', monospace; font-size: .56rem; }
 
-.clients-section { padding: 56px 0; background: var(--white); border-bottom: 1px solid var(--line); }
+.clients-section { padding: 56px 0; background: var(--white); border-top: 1px solid var(--line); }
 .clients-wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 40px; }
 .clients-label { margin: 0; color: var(--ink-soft); font-family: 'DM Mono', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
 .clients-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 0; padding: 0; list-style: none; }
-.clients-logos li { display: flex; align-items: center; justify-content: center; height: 56px; padding: 8px 20px; border: 1px solid var(--line); }
-.clients-logos img { max-width: 110px; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.clients-logos a { display: flex; align-items: center; gap: 12px; height: 56px; padding: 8px 20px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: border-color .2s ease; }
+.clients-logos a:hover, .clients-logos a:focus-visible { border-color: var(--ink); }
+.clients-logos img { max-width: 90px; max-height: 100%; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: .75; transition: filter .2s ease, opacity .2s ease; }
+.clients-logos a:hover img, .clients-logos a:focus-visible img { filter: grayscale(0); opacity: 1; }
+.clients-logos span { font-size: .78rem; font-weight: 600; white-space: nowrap; }
 
 .section { padding: 120px 0; }.section-heading { display: flex; justify-content: space-between; gap: 50px; align-items: flex-end; margin-bottom: 64px; }.section-heading > p { max-width: 300px; margin-bottom: 4px; color: var(--ink-soft); font-size: .87rem; }.section-heading .eyebrow { margin-bottom: 20px; }
 h2 { margin-bottom: 0; font-size: clamp(2.8rem, 5vw, 4.9rem); font-weight: 700; }.service-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
