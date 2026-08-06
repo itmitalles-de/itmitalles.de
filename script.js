@@ -27,7 +27,7 @@ function applyTheme(theme) {
   });
 }
 
-applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
 
 document.querySelectorAll('[data-theme-switch]').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -35,11 +35,6 @@ document.querySelectorAll('[data-theme-switch]').forEach((btn) => {
     localStorage.setItem(THEME_KEY, theme);
     applyTheme(theme);
   });
-});
-
-const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-systemThemeQuery.addEventListener('change', (e) => {
-  if (!localStorage.getItem(THEME_KEY)) applyTheme(e.matches ? 'dark' : 'light');
 });
 
 const LANG_KEY = 'itmitalles-lang';
