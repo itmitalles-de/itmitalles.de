@@ -22,24 +22,24 @@ const LANG_KEY = 'itmitalles-lang';
 
 const headTranslations = {
   de: {
-    title: 'IT mit alles – IT-Service aus Giesing',
-    description: 'IT mit alles: verständlicher IT-Service für kleine Firmen, Selbstständige und Privatpersonen in Giesing und München.',
-    ogTitle: 'IT mit alles – IT-Service aus Giesing',
+    title: 'IT mit alles – IT-Service in München',
+    description: 'IT mit alles: verständlicher IT-Service für kleine Firmen, Selbstständige und Privatpersonen in München.',
+    ogTitle: 'IT mit alles – IT-Service in München',
     ogDescription: 'Netzwerk, Geräte, Server, Cloud und Web. Persönlich, verständlich und ohne unnötiges Abo.',
     ld: {
-      description: 'IT-Service für kleine Firmen, Selbstständige und Privatpersonen in Giesing und München.',
-      areaServed: ['Giesing', 'München'],
+      description: 'IT-Service für kleine Firmen, Selbstständige und Privatpersonen in München.',
+      areaServed: ['München'],
       serviceType: ['IT-Service', 'Systemadministration', 'Netzwerk und WLAN', 'E-Commerce und Web', 'Automatisierung und individuelle Tools'],
     },
   },
   en: {
-    title: 'IT mit alles – IT Service from Giesing, Munich',
-    description: 'IT mit alles: plain-language IT service for small businesses, freelancers and individuals in Giesing and Munich.',
-    ogTitle: 'IT mit alles – IT Service from Giesing',
+    title: 'IT mit alles – IT Service in Munich',
+    description: 'IT mit alles: plain-language IT service for small businesses, freelancers and individuals in Munich.',
+    ogTitle: 'IT mit alles – IT Service in Munich',
     ogDescription: 'Network, devices, servers, cloud and web. Personal, understandable, and without unnecessary subscriptions.',
     ld: {
-      description: 'IT service for small businesses, freelancers and individuals in Giesing and Munich.',
-      areaServed: ['Giesing', 'Munich'],
+      description: 'IT service for small businesses, freelancers and individuals in Munich.',
+      areaServed: ['Munich'],
       serviceType: ['IT Service', 'System Administration', 'Network and WiFi', 'E-Commerce and Web', 'Automation and Custom Tools'],
     },
   },
@@ -76,6 +76,11 @@ function applyLanguage(lang) {
     if (label) el.setAttribute('aria-label', label);
   });
 
+  document.querySelectorAll('[data-placeholder-de]').forEach((el) => {
+    const placeholder = el.getAttribute(lang === 'en' ? 'data-placeholder-en' : 'data-placeholder-de');
+    if (placeholder) el.setAttribute('placeholder', placeholder);
+  });
+
   const emailLink = document.querySelector('#contact-email');
   if (emailLink) {
     const subject = emailLink.getAttribute(lang === 'en' ? 'data-subject-en' : 'data-subject-de');
@@ -100,3 +105,49 @@ document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
 });
 
 applyLanguage(initialLanguage());
+
+const contactForm = document.querySelector('#contact-form');
+const contactFormStatus = document.querySelector('#contact-form-status');
+
+const formStatusText = {
+  sending: { de: 'Wird gesendet …', en: 'Sending …' },
+  success: { de: 'Danke! Nachricht ist raus, ich melde mich.', en: 'Thanks! Message sent, I\'ll get back to you.' },
+  error: { de: 'Hat nicht geklappt. Bitte direkt per Mail schreiben.', en: 'Something went wrong. Please email me directly instead.' },
+};
+
+function setFormStatus(state) {
+  if (!contactFormStatus) return;
+  const lang = document.documentElement.lang === 'en' ? 'en' : 'de';
+  contactFormStatus.textContent = formStatusText[state][lang];
+  contactFormStatus.dataset.state = state;
+}
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (contactForm.querySelector('.contact-form-honeypot')?.checked) return;
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    setFormStatus('sending');
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+      });
+      const result = await response.json();
+      if (response.ok && result.success) {
+        setFormStatus('success');
+        contactForm.reset();
+      } else {
+        setFormStatus('error');
+      }
+    } catch (err) {
+      setFormStatus('error');
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+}
