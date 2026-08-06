@@ -18,6 +18,30 @@ if (menuButton && navigation) {
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
 
+const THEME_KEY = 'itmitalles-theme';
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.querySelectorAll('[data-theme-switch]').forEach((btn) => {
+    btn.setAttribute('aria-pressed', String(btn.getAttribute('data-theme-switch') === theme));
+  });
+}
+
+applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+
+document.querySelectorAll('[data-theme-switch]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const theme = btn.getAttribute('data-theme-switch');
+    localStorage.setItem(THEME_KEY, theme);
+    applyTheme(theme);
+  });
+});
+
+const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+systemThemeQuery.addEventListener('change', (e) => {
+  if (!localStorage.getItem(THEME_KEY)) applyTheme(e.matches ? 'dark' : 'light');
+});
+
 const LANG_KEY = 'itmitalles-lang';
 
 const headTranslations = {
