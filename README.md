@@ -1,28 +1,28 @@
 # IT mit alles
 
-Statische Website für den Münchner IT-Service. Die Seite besteht bewusst nur aus HTML, CSS und einem kleinen JavaScript für Sprachumschaltung, mobile Navigation und das Kontaktformular. Dadurch bleibt sie schnell, günstig und leicht zu pflegen.
+Static website for the Munich-based IT service. The site intentionally uses only HTML, CSS, and a small JavaScript layer for language switching, mobile navigation, and the contact form. This keeps it fast, affordable, and easy to maintain.
 
-## Veröffentlichung
+## Deployment
 
-Ein Push auf `main` startet `.github/workflows/pages.yml` und veröffentlicht die Website über GitHub Pages.
+A push to `main` starts `.github/workflows/pages.yml` and publishes the website through GitHub Pages.
 
-## Kontaktformular (Web3Forms)
+## Contact Form (Web3Forms)
 
-Das Formular in `index.html` (`#contact-form`) sendet ohne eigenen Server per [Web3Forms](https://web3forms.com/) eine Mail an `tim@itmitalles.de`:
+The form in `index.html` (`#contact-form`) uses [Web3Forms](https://web3forms.com/) to send an email to `tim@itmitalles.de` without a custom server:
 
-1. Auf web3forms.com die Mailadresse `tim@itmitalles.de` eintragen, den zugeschickten Access-Key kopieren.
-2. In `index.html` den Platzhalter `YOUR_WEB3FORMS_ACCESS_KEY` (`<input type="hidden" name="access_key" ...>`) durch den echten Key ersetzen.
+1. Enter the email address `tim@itmitalles.de` on web3forms.com and copy the access key you receive.
+2. In `index.html`, replace the `YOUR_WEB3FORMS_ACCESS_KEY` placeholder (`<input type="hidden" name="access_key" ...>`) with the real key.
 
-Bis dahin schlägt das Absenden mit einer Fehlermeldung fehl; Mail- und WhatsApp-Link funktionieren unabhängig davon sofort.
+Until then, form submission will fail with an error; the email and WhatsApp links work immediately regardless.
 
-## Vor dem öffentlichen Start
+## Before Going Public
 
-- [x] Impressum mit echtem Namen, ladungsfähiger Anschrift und Kontaktdaten ausgefüllt (Tim-Lion Niedermaier / IT mit alles, Werinherstr. 110, 81541 München).
-- [ ] Web3Forms Access-Key eintragen (siehe oben), sonst geht das Kontaktformular nicht raus.
-- Datenschutzerklärung auf die tatsächlich verwendete Mail-, Formular- (Web3Forms) und Hosting-Infrastruktur abstimmen.
-- Prüfen, ob `tim@itmitalles.de` als Postfach eingerichtet ist.
-- DNS für `itmitalles.de` und optional `www.itmitalles.de` auf GitHub Pages zeigen lassen.
+- [x] Legal notice completed with the real name, service address, and contact details (Tim-Lion Niedermaier / IT mit alles, Werinherstr. 110, 81541 Munich).
+- [ ] Add the Web3Forms access key (see above), otherwise the contact form will not send.
+- [ ] Align the privacy policy with the actual email, form (Web3Forms), and hosting infrastructure.
+- [ ] Verify that `tim@itmitalles.de` is configured as a mailbox.
+- [ ] Point DNS for `itmitalles.de` and optionally `www.itmitalles.de` to GitHub Pages.
 
-## Inhaltliche Leitlinie
+## Content Guidelines
 
-Die Positionierung folgt dem vorhandenen Businessplan: kleine Firmen und Teams bis etwa zehn Mitarbeitende, Freiberufler und Privatpersonen; Netzwerk und WLAN, Geräte und Arbeitsplätze, Server und Cloud sowie E-Commerce und Web. Das Angebot ist konkrete Hilfe auf Zuruf nach Absprache und aktueller Verfügbarkeit – ohne starre SLAs, 24/7-Versprechen oder unnötige monatliche Bereitschaftspauschalen. Monitoring und laufende Betreuung sind bewusst kein Bestandteil des Startangebots.
+The positioning follows the existing business plan: small companies and teams of up to around ten employees, freelancers, and private individuals; networks and Wi-Fi, devices and workstations, servers and cloud, plus e-commerce and the web. The service provides practical help on request, subject to agreement and current availability — without rigid SLAs, 24/7 promises, or unnecessary monthly retainers. Monitoring and ongoing support are intentionally not part of the initial offering.
